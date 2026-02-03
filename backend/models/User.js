@@ -1,16 +1,15 @@
 import mongoose from "mongoose";
 
 const userSchema = mongoose.Schema({
-  name: String,
-  email: { type: String, unique: true },
-  password: String,
-  wishlist: [{ type: mongoose.Schema.Types.ObjectId, ref: "Product" }],
+  name: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
   cart: [
     {
       product: { type: mongoose.Schema.Types.ObjectId, ref: "Product" },
-      quantity: { type: Number, default: 1 }
-    }
-  ]
-});
+      quantity: { type: Number, default: 1 },
+    },
+  ],
+}, { timestamps: true });
 
 export default mongoose.model("User", userSchema);
