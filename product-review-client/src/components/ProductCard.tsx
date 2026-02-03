@@ -74,7 +74,7 @@ export default function ProductCard({ product, onDelete }: { product: Product; o
         <Typography
           sx={{ color: "#64748b", fontSize: "0.9rem", lineHeight: "1.6", flex: 1, marginBottom: "1.5rem" }}
         >
-          {product.description?.length > 70 ? product.description.substring(0, 70) + "..." : product.description}
+          {(String(product.description ?? "")).length > 70 ? (String(product.description ?? "")).substring(0, 70) + "..." : product.description}
         </Typography>
 
         <Box sx={{ display: "flex", gap: "0.75rem", marginTop: "auto" }}>
