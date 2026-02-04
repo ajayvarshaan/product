@@ -7,9 +7,9 @@ import ProductDetails from "./pages/ProductDetails";
 import AddProduct from "./pages/AddProduct";
 import UserProfile from "./pages/UserProfile";
 import EditProduct from "./pages/EditProduct";
-import Cart from "./pages/Cart"; 
+import Cart from "./pages/Cart"; // Import
 import ProtectedRoute from "./components/ProtectedRoute";
-import Orders from "./pages/Orders"; 
+import Orders from "./pages/Orders";
 
 export default function App() {
   return (

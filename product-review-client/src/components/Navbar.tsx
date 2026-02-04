@@ -31,9 +31,6 @@ export default function Navbar() {
           </Link>
           <Link to="/profile" className="btn" style={{ background: "transparent", color: "#64748b", padding: "0.5rem 0.75rem", fontSize: "0.9rem" }}>Dashboard</Link>
           <Link to="/add-product" className="btn btn-primary" style={{ padding: "0.5rem 1rem", borderRadius: "8px", fontSize: "0.9rem" }}>+ New</Link>
-          <Link to="/orders" className="btn" style={{ background: "transparent", color: "#64748b", padding: "0.5rem 0.75rem", fontSize: "0.9rem" }}>
-  Orders
-</Link>
           <button onClick={() => { localStorage.removeItem("token"); navigate("/login"); }} style={{ background: "#fee2e2", border: "none", width: "36px", height: "36px", borderRadius: "8px", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", color: "#ef4444" }}>➜</button>
         </div>
       </nav>
